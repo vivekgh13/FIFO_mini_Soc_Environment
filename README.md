@@ -2,25 +2,6 @@
 
 This project implements and verifies a synchronous FIFO (First-In First-Out) using a modular SystemVerilog testbench architecture. It focuses on validating data integrity, pointer behavior, and corner-case scenarios using transaction-based verification.
 
- # Project Structure
-top/
- ├── env/
- │    ├── agent/
- │    │    ├── read_ag/
- │    │    │    ├── rd_bfm.sv
- │    │    │    ├── rd_gen.sv
- │    │    │    ├── rd_mon.sv
- │    │    │    └── rd_cov.sv
- │    │    ├── write_ag/
- │    │    │    ├── wr_bfm.sv
- │    │    │    ├── wr_gen.sv
- │    │    │    └── wr_mon.sv
- │    │    ├── rd_agent.sv
- │    │    └── wr_agent.sv
- │    ├── env.sv
- │    └── sbd.sv
- ├── transactions/
- └── top.sv
 # Components Overview
 # Write Agent (write_ag)
 wr_gen.sv → Generates write transactions
