@@ -1,0 +1,21 @@
+`include "common.sv"
+`include "fifo_m.v"
+
+`include "if.sv"
+`include "wr_tx.sv"
+`include "rd_tx.sv"
+`include "wr_gen.sv"
+`include "rd_gen.sv"
+`include "wr_bfm.sv"
+`include "rd_bfm.sv"
+`include "wr_mon.sv"
+`include "rd_mon.sv"
+`include "wr_cov.sv"
+`include "rd_cov.sv"
+`include "wr_agent.sv"
+`include "rd_agent.sv"
+`include "sbd.sv"
+`include "env.sv"
+`include "top.sv"
+
+
