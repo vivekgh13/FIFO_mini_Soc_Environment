@@ -1,12 +1,11 @@
-class wr_cov extends uvm_subscriber#(wr_tx);
-wr_tx tx;
-  
-`uvm_component_utils(wr_cov)
+class rd_cov extends uvm_subscriber#(rd_tx);
+rd_tx tx;
+`uvm_component_utils(rd_cov)
 
 
 covergroup cg;
- WRITES : coverpoint tx.wr_en{
- bins WRITES={1'b1};
+ READS : coverpoint tx.rd_en{
+ bins READS={1'b1};
  }
  endgroup
 
@@ -19,10 +18,9 @@ function void build_phase(uvm_phase phase);
 super.build_phase(phase);
 endfunction
 
-  virtual function void write(wr_tx t);
-    $cast(tx,t);
+virtual function void write(rd_tx t);
+  $cast(tx,t);
 cg.sample();
 endfunction
 
 endclass
-
